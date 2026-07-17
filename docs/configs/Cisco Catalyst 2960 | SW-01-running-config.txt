@@ -1,0 +1,147 @@
+!
+! ==========================================================
+! MS-LAB Infrastructure
+! Public version for documentation purposes.
+! Sensitive information (password hashes, serial numbers)
+! has been removed.
+! ==========================================================
+!
+
+
+
+
+
+
+SW-O1#sh running-config
+Building configuration...
+
+Current configuration : 2014 bytes
+!
+! Last configuration change at 03:54:33 UTC Mon Mar 1 1993 by admin
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname SW-O1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username <hidden> privilege 15 secret 4 <redacted>
+no aaa new-model
+system mtu routing 1500
+!
+!
+ip domain-name ms-lab.local
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+ip ssh version 2
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/2
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+ switchport access vlan 20
+ switchport mode access
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+ switchport trunk native vlan 40
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+ switchport access vlan 30
+ switchport mode access
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+ switchport access vlan 99
+ switchport mode access
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ shutdown
+!
+interface Vlan99
+ ip address 192.168.99.2 255.255.255.248
+ no ip route-cache
+!
+ip default-gateway 192.168.99.1
+no ip http server
+no ip http secure-server
+!
+!
+line con 0
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+end
+
+SW-O1#
