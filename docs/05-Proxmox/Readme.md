@@ -10,6 +10,19 @@ Actualmente aloja el servidor de archivos Samba y será la base para futuras imp
 
 ---
 
+# Diagrama
+
+Internet
+    │
+Cisco 2901
+    │
+Catalyst 2960 (Trunk)
+    │
+Proxmox VE (192.168.40.2)
+    │
+└── LXC - FileServer (Samba)
+
+
 # Especificaciones
 
 | Característica | Valor |
