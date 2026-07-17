@@ -103,7 +103,8 @@ https://192.168.40.2:8006
 
 ## Panel principal
 
-<img width="1908" height="1034" alt="image" src="https://github.com/user-attachments/assets/8cadb955-21be-431c-a5e0-0f1749378cdc" />
+<img width="1913" height="735" alt="image" src="https://github.com/user-attachments/assets/3fb89312-29eb-41b5-9020-5f69abcb3219" />
+
 
 
 ---
