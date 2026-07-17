@@ -89,8 +89,7 @@ Roadmap
  DNS
  VPN
  Wireless
- 
-Capturas
+
 
 
 
