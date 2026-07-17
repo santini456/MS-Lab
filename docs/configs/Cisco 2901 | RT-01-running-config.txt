@@ -1,0 +1,182 @@
+!
+! ==========================================================
+! MS-LAB Infrastructure
+! Public version for documentation purposes.
+! Sensitive information (password hashes, serial numbers)
+! has been removed.
+! ==========================================================
+!
+
+
+
+
+RT-01#show running-config
+Building configuration...
+
+Current configuration : 2948 bytes
+!
+! Last configuration change at 23:28:29 UTC Thu Jul 16 2026 by admin
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname RT-01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+ip dhcp excluded-address 192.168.10.1 192.168.10.19
+ip dhcp excluded-address 192.168.99.1 192.168.99.4
+!
+ip dhcp pool LAN
+ network 192.168.10.0 255.255.255.0
+ default-router 192.168.10.1
+ dns-server 8.8.8.8 1.1.1.1
+!
+ip dhcp pool MULTIMEDIA
+ network 192.168.20.0 255.255.255.0
+ default-router 192.168.20.1
+ dns-server 8.8.8.8 1.1.1.1
+!
+ip dhcp pool INVITADOS
+ network 192.168.30.0 255.255.255.0
+ default-router 192.168.30.1
+ dns-server 8.8.8.8 1.1.1.1
+!
+ip dhcp pool GESTION
+ network 192.168.99.0 255.255.255.248
+ default-router 192.168.99.1
+ dns-server 8.8.8.8
+!
+!
+!
+ip domain name ms-lab.local
+ip cef
+no ipv6 cef
+multilink bundle-name authenticated
+!
+!
+!
+!
+license udi pid CISCO2901/K9 sn <redacted>
+!
+!
+username <redacted> privilege 15 secret 5 <hidden>
+!
+redundancy
+!
+!
+ip ssh version 2
+!
+!
+!
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/0
+ ip address dhcp
+ ip nat outside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ no ip address
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.30
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.40
+ encapsulation dot1Q 40
+ ip address 192.168.40.1 255.255.255.240
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.99
+ encapsulation dot1Q 99
+ ip address 192.168.99.1 255.255.255.248
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/0/0
+ no ip address
+!
+interface GigabitEthernet0/0/1
+ no ip address
+!
+interface GigabitEthernet0/0/2
+ no ip address
+!
+interface GigabitEthernet0/0/3
+ no ip address
+!
+interface Vlan1
+ no ip address
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip nat inside source list 1 interface GigabitEthernet0/0 overload
+!
+!
+!
+access-list 1 permit 192.168.0.0 0.0.255.255
+!
+control-plane
+!
+!
+banner motd ^C
+*************************************************
+               MS-LAB INFRAESTRUCTURA
+              Solo personal autorizado
+*************************************************
+^C
+!
+line con 0
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+scheduler allocate 20000 1000
+!
+end
+
+RT-01#
