@@ -70,12 +70,6 @@ SSIDs configurados
 <img width="1911" height="948" alt="image" src="https://github.com/user-attachments/assets/a5e2e740-ac95-4378-afcf-f380b42a6ccd" />
 
 
-Cliente conectado - Administración
-<!-- Agregar acá la captura de un dispositivo conectado al SSID Administración con IP de VLAN 10 -->
+Cliente conectado 
+<img width="354" height="770" alt="image" src="https://github.com/user-attachments/assets/16258979-0506-4ba2-b324-d2f0f6e345cd" />
 
-image
-
-Cliente conectado - Invitados
-
-
-image
