@@ -10,6 +10,28 @@ Sus funciones son:
 - Servidor DHCP
 - NAT/PAT para salida a Internet
 - Administración remota mediante SSH
+- ACLS
+
+ ## ACL
+
+S## ACL
+
+Se implementaron ACLs extendidas para controlar el tráfico entre VLANs, restringiendo el acceso a las redes de Servidores y Gestión desde las demás VLANs, y permitiendo únicamente el acceso puntual a los recursos necesarios.
+
+**ADMINISTRACION** (VLAN 10) y **PRODUCCION-MULTIMEDIA** (VLAN 20)
+- Se permite el acceso al FileServer (`192.168.40.3`)
+- Se permite el acceso al Controlador de Dominio (`192.168.40.5`), necesario para autenticación de usuarios y equipos contra Active Directory
+- Se deniega el acceso al resto de la red de Servidores (VLAN 40)
+- Se deniega el acceso a la red de Gestión (VLAN 99)
+- Se permite el resto del tráfico (incluyendo salida a Internet)
+
+**INVITADOS** (VLAN 30)
+- Se deniega el acceso a todas las demás VLANs internas (Administración, Multimedia, Servidores, Gestión)
+- Se permite únicamente la salida a Internet
+
+Además, se mantiene una ACL estándar (`access-list 1`) utilizada junto con NAT/PAT para permitir la salida a Internet de todo el rango `192.168.0.0/16`.
+
+
 
 ---
 
@@ -78,7 +100,8 @@ Configuración de ACL
 
 
 
-<img width="838" height="379" alt="image" src="https://github.com/user-attachments/assets/6b06a3aa-a4f4-4980-a5ac-7e2618dd5c17" />
+<img width="630" height="415" alt="image" src="https://github.com/user-attachments/assets/d8e197b7-8fd2-4048-983e-f235fb7638c4" />
+
 
 
 ## Configuración completa
