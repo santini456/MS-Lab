@@ -30,6 +30,7 @@ Las configuraciones incluyen, según corresponda:
 - SSH
 - Usuarios locales
 - Configuración WAN
+- ACLS
 
 ---
 
