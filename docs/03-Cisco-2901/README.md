@@ -77,7 +77,7 @@ Sus funciones son:
 Configuración de ACL
 
 
-image
+
 <img width="838" height="379" alt="image" src="https://github.com/user-attachments/assets/6b06a3aa-a4f4-4980-a5ac-7e2618dd5c17" />
 
 
