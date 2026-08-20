@@ -73,7 +73,7 @@ interface GigabitEthernet0/1.10
  description LAN
  encapsulation dot1Q 10
  ip address 192.168.10.1 255.255.255.0
- ip access-group OFICINAS in
+ ip access-group ADMINISTRACION in
  ip nat inside
  ip virtual-reassembly in
 !
@@ -81,7 +81,7 @@ interface GigabitEthernet0/1.20
  description MULTIMEDIA
  encapsulation dot1Q 20
  ip address 192.168.20.1 255.255.255.0
- ip access-group MULTIMEDIA in
+ ip access-group PRODUCCION-MULTIMEDIA in
  ip nat inside
  ip virtual-reassembly in
 !
@@ -129,21 +129,23 @@ no ip http secure-server
 !
 ip nat inside source list 1 interface GigabitEthernet0/0 overload
 !
+ip access-list extended ADMINISTRACION
+ permit ip 192.168.10.0 0.0.0.255 host 192.168.40.3
+ permit ip 192.168.10.0 0.0.0.255 host 192.168.40.5
+ deny   ip 192.168.10.0 0.0.0.255 192.168.40.0 0.0.0.15
+ deny   ip 192.168.10.0 0.0.0.255 192.168.99.0 0.0.0.7
+ permit ip any any
 ip access-list extended INVITADOS
  deny   ip 192.168.30.0 0.0.0.255 192.168.10.0 0.0.0.255
  deny   ip 192.168.30.0 0.0.0.255 192.168.20.0 0.0.0.255
  deny   ip 192.168.30.0 0.0.0.255 192.168.40.0 0.0.0.15
  deny   ip 192.168.30.0 0.0.0.255 192.168.99.0 0.0.0.7
  permit ip any any
-ip access-list extended MULTIMEDIA
+ip access-list extended PRODUCCION-MULTIMEDIA
  permit ip 192.168.20.0 0.0.0.255 host 192.168.40.3
+ permit ip 192.168.20.0 0.0.0.255 host 192.168.40.5
  deny   ip 192.168.20.0 0.0.0.255 192.168.40.0 0.0.0.15
  deny   ip 192.168.20.0 0.0.0.255 192.168.99.0 0.0.0.7
- permit ip any any
-ip access-list extended OFICINAS
- permit ip 192.168.10.0 0.0.0.255 host 192.168.40.3
- deny   ip 192.168.10.0 0.0.0.255 192.168.40.0 0.0.0.15
- deny   ip 192.168.10.0 0.0.0.255 192.168.99.0 0.0.0.7
  permit ip any any
 !
 access-list 1 permit 192.168.0.0 0.0.255.255
@@ -172,4 +174,3 @@ line vty 0 4
 scheduler allocate 20000 1000
 !
 end
- 
