@@ -47,7 +47,7 @@ Su función es realizar la segmentación de la red mediante VLANs, transportar e
 |---------|----------|
 | Gi0/1 | Trunk hacia RT-01 |
 | Fa0/14 | Servidor (VLAN 40) |
-| Fa0/19 | Cliente Invitados (VLAN 30) |
+| Fa0/24 | Cliente Invitados y Wifi administracion (VLAN 30 y vlan 10) |
 
 > El resto de los puertos pueden asignarse dinámicamente según las necesidades del laboratorio.
 
