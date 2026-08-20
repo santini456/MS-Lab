@@ -1,7 +1,6 @@
-# Changelog
+## Changelog
 
-## v1.0
-
+### v1.0
 - Diseño inicial del laboratorio
 - VLANs implementadas
 - Router-on-a-Stick
@@ -11,23 +10,19 @@
 - Proxmox VE
 - Servidor Samba
 
----
+### v1.1
+- ACLs extendidas por VLAN (Administración, Producción/Multimedia, Invitados)
+- Segmentación de tráfico entre redes de usuarios, Servidores y Gestión
 
-## v1.1
+### v1.2
+- Active Directory (AD DS) — Controlador de Dominio
+- DNS interno con forwarders hacia Internet
 
-- ACLs
-- Segmentación de administración
+### v1.3
+- Access Point (Cisco RV110W) en modo AP
+- SSIDs independientes por VLAN (Administración / Invitados)
+- Actualización de ACLs para permitir autenticación de clientes contra el Controlador de Dominio
 
----
-
-## v1.2
-
-- Active Directory
-- DNS
-
----
-
-## v1.3
-
+### Próximo
+- Estructura de OUs, Usuarios, Grupos y GPOs
 - VPN
-- Access Point
