@@ -93,24 +93,27 @@ https://192.168.40.2:8006
 ## Verificación
 
 ### Panel principal
-image
+<img width="1915" height="942" alt="image" src="https://github.com/user-attachments/assets/fe171a25-d3a6-4412-bc60-ceaef1795287" />
+
 
 ### Nodo
-image
+<img width="1918" height="941" alt="image" src="https://github.com/user-attachments/assets/ebec4209-c333-40fa-ac65-6d3f77d652b0" />
+
 
 ### Contenedor LXC
-image
+<img width="1913" height="943" alt="image" src="https://github.com/user-attachments/assets/5c65120d-f02d-4dd2-81cd-88b113c49002" />
 
-### Configuración de red
-image
+
+
 
 ### Máquina Virtual - Windows Server
-<!-- Agregar acá captura de la VM DC01 en el panel de Proxmox -->
-image
+<img width="1913" height="953" alt="image" src="https://github.com/user-attachments/assets/32c598c8-9afa-4de8-803c-6a68dce2741b" />
+
 
 ### Active Directory - Controlador de Dominio
-<!-- Agregar acá captura de "Usuarios y equipos de Active Directory" mostrando mslab.local -->
-image
+<img width="1912" height="943" alt="image" src="https://github.com/user-attachments/assets/b8db0917-4323-41e4-b16d-5f6510e8d1a3" />
+
+
 
 ## Próximas implementaciones
 
