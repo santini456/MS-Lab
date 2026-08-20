@@ -92,7 +92,8 @@ Gateway:
 
 ## Trunk
 
-<img width="688" height="347" alt="image" src="https://github.com/user-attachments/assets/8fd9869c-22ba-4471-811c-5df7d8c6383f" />
+<img width="700" height="421" alt="image" src="https://github.com/user-attachments/assets/afdc6e6c-2340-4af6-b841-f1086ef6d946" />
+
 
 
 ---
