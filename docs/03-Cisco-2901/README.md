@@ -40,6 +40,7 @@ Sus funciones son:
 - ✅ DHCP
 - ✅ NAT/PAT
 - ✅ SSH
+- ✅ ACL
 
 ---
 
@@ -72,6 +73,13 @@ Sus funciones son:
 <img width="1628" height="617" alt="image" src="https://github.com/user-attachments/assets/dd0e0060-5bff-42d3-aa70-a75bc7a101b7" />
 
 ---
+
+Configuración de ACL
+
+
+image
+<img width="838" height="379" alt="image" src="https://github.com/user-attachments/assets/6b06a3aa-a4f4-4980-a5ac-7e2618dd5c17" />
+
 
 ## Configuración completa
 
