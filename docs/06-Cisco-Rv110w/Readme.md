@@ -5,14 +5,10 @@ El Cisco RV110W se incorporó al laboratorio en modo Access Point puro, sin util
 
 Su función es brindar cobertura wifi segmentada, asociando cada SSID a la VLAN correspondiente mediante 802.1Q, replicando la misma segmentación y políticas de ACL ya definidas para el resto del laboratorio.
 
-Especificaciones
-Característica	Valor
-Plataforma	Cisco RV110W
-Modo de operación	Access Point
-Gestión	Interfaz Web
+
 Red de gestión	VLAN 99 - Gestión
-IP de gestión	192.168.99.6/29
-Gateway	192.168.99.1
+IP de gestión:	192.168.99.6/29
+Gateway:	192.168.99.1
 Conexión	Puerto LAN 1 → Trunk hacia Catalyst 2960 (Gi0/1)
 Diagrama
 Internet
@@ -63,13 +59,16 @@ Este equipo no dispone de CLI/SSH para configuración; toda la gestión se reali
 VLAN Membership
 
 
+<img width="1913" height="947" alt="image" src="https://github.com/user-attachments/assets/487d0138-d048-400d-a05f-a96eea2f2b25" />
 
 
-image
+
+
 
 SSIDs configurados
 
-image
+<img width="1911" height="948" alt="image" src="https://github.com/user-attachments/assets/a5e2e740-ac95-4378-afcf-f380b42a6ccd" />
+
 
 Cliente conectado - Administración
 <!-- Agregar acá la captura de un dispositivo conectado al SSID Administración con IP de VLAN 10 -->
@@ -77,6 +76,6 @@ Cliente conectado - Administración
 image
 
 Cliente conectado - Invitados
-<!-- Agregar acá la captura de un dispositivo conectado al SSID Invitados con IP de VLAN 1 -->
+
 
 image
