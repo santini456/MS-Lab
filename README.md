@@ -1,6 +1,8 @@
 Banner
 
-<img width="1088" height="779" alt="image" src="https://github.com/user-attachments/assets/f9ec4258-0d40-4474-99a8-75495057fb90" />
+
+<img width="1031" height="777" alt="image" src="https://github.com/user-attachments/assets/74618c0d-cf4b-46b8-92e9-5e9cd7062cc4" />
+
 
 
 MS-LAB
@@ -20,10 +22,11 @@ NAT/PAT	✅
 SSH	✅
 Proxmox VE	✅
 Samba	✅
-ACL	🔄
+ACL	✅
 Active Directory	⏳
-DNS	⏳
+DNS	✅
 VPN	⏳
+
 Hardware
 Equipo	Modelo
 Router	Cisco 2901
@@ -33,7 +36,7 @@ Servidor	Proxmox VE
 Cliente	Windows 11
 Topología
 
-<img width="700" height="702" alt="image" src="https://github.com/user-attachments/assets/bc7c7c78-cea7-45cb-ad9d-dc7632ee11e7" />
+<img width="635" height="803" alt="image" src="https://github.com/user-attachments/assets/bce3b422-0f4f-4f8c-b131-b15115d432c3" />
 
 
 Direccionamiento
